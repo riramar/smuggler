@@ -17,7 +17,7 @@ mutations["tabprefix1"] = render_template("Transfer-Encoding:\tchunked")
 mutations["tabprefix2"] = render_template("Transfer-Encoding\t:\tchunked")
 mutations["space1"] = render_template("Transfer-Encoding : chunked")
 
-for i in [0x1,0x4,0x8,0x9,0xa,0xb,0xc,0xd,0xF,0x1F,0x20,0x7f,0xA0,0xFF]:
+for i in [0x1,0x4,0x8,0x9,0xa,0xb,0xc,0xd,0xf,0x1f,0x20,0x7f,0xa0,0xff]:
 	mutations["midspace-%02x"%i] = render_template("Transfer-Encoding:%cchunked"%(i))
 	mutations["postspace-%02x"%i] = render_template("Transfer-Encoding%c: chunked"%(i))
 	mutations["prespace-%02x"%i] = render_template("%cTransfer-Encoding: chunked"%(i))
